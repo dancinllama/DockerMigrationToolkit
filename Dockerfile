@@ -5,3 +5,5 @@ MAINTAINER James Loghry <jwl007@gmail.com>
 ENV SALESFORCE_API_VERSION 38
 RUN cd /opt/ant/lib
 RUN wget https://github.com/dancinllama/ant-salesforce/raw/master/ant-salesforce_${SALESFORCE_API_VERSION}.jar
+RUN wget https://github.com/dancinllama/DockerApexDoc/raw/master/apexdoc.jar
+
