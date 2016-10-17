@@ -1,0 +1,12 @@
+<project name="Salesforce Deploy Script" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property environment="env" />
+
+    <target name="deploy" description="Deploy metadata from source dir to target org">
+        <echo>Deploying code to ${env.SALESFORCE_SERVER_URL}</echo>
+        <echo>Deploying code with username: ${env.SALESFORCE_USERNAME}</echo>	
+        <echo>Run All Tests: ${env.SALESFORCE_RUN_TESTS}</echo>
+        <echo>Deploy Root: ./src</echo>
+        <sf:deploy username="${env.SALESFORCE_USERNAME}" password="${env.SALESFORCE_PASSWORD}" serverurl="${env.SALESFORCE_SERVER_URL}" deployroot="./src" runAllTests="${env.SALESFORCE_RUN_TESTS}" />
+    </target>
+</project>
