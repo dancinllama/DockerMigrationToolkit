@@ -6,7 +6,7 @@
         <echo>Deploying code to ${env.SALESFORCE_SERVER_URL}</echo>
         <echo>Deploying code with username: ${env.SALESFORCE_USERNAME}</echo>	
         <echo>Run All Tests: ${env.SALESFORCE_RUN_TESTS}</echo>
-        <echo>Deploy Root: ./src</echo>
-        <sf:deploy username="${env.SALESFORCE_USERNAME}" password="${env.SALESFORCE_PASSWORD}" serverurl="${env.SALESFORCE_SERVER_URL}" deployroot="./src" runAllTests="${env.SALESFORCE_RUN_TESTS}" />
+        <echo>Deploy Root: ${env.SALESFORCE_SOURCE_DIR}</echo>
+        <sf:deploy username="${env.SALESFORCE_USERNAME}" password="${env.SALESFORCE_PASSWORD}" serverurl="${env.SALESFORCE_SERVER_URL}" deployroot="${env.SALESFORCE_SOURCE_DIR}" runAllTests="${env.SALESFORCE_RUN_TESTS}" />
     </target>
 </project>
