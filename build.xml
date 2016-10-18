@@ -5,8 +5,8 @@
     <target name="deploy" description="Deploy metadata from source dir to target org">
         <echo>Deploying code to ${env.SALESFORCE_SERVER_URL}</echo>
         <echo>Deploying code with username: ${env.SALESFORCE_USERNAME}</echo>	
-        <echo>Run All Tests: ${env.SALESFORCE_RUN_TESTS}</echo>
+        <echo>Run All Tests: ${env.SALESFORCE_RUN_ALL_TESTS}</echo>
         <echo>Deploy Root: ${env.SALESFORCE_SOURCE_DIR}</echo>
-        <sf:deploy username="${env.SALESFORCE_USERNAME}" password="${env.SALESFORCE_PASSWORD}" serverurl="${env.SALESFORCE_SERVER_URL}" deployroot="${env.SALESFORCE_SOURCE_DIR}" runAllTests="${env.SALESFORCE_RUN_TESTS}" />
+        <sf:deploy username="${env.SALESFORCE_USERNAME}" password="${env.SALESFORCE_PASSWORD}" serverurl="${env.SALESFORCE_SERVER_URL}" deployroot="${env.SALESFORCE_SOURCE_DIR}" runAllTests="${env.SALESFORCE_RUN_ALL_TESTS}" />
     </target>
 </project>
